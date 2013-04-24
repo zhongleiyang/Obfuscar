@@ -527,5 +527,12 @@ namespace Obfuscar
 		{
 			return Name;
 		}
+
+       
+        public bool IsUnitySkipMethod(MethodDefinition method)
+        {
+            return UnityUtil.isSkipMethod(method.ToString());
+
+        }
 	}
 }

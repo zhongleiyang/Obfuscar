@@ -241,6 +241,10 @@ namespace Obfuscar
 						// rename field, grouping according to signature
 						foreach (FieldDefinition field in type.Fields)
 						{
+
+                            if (field.Attributes ==  FieldAttributes.Public)
+                                continue;
+
 							string sig = field.FieldType.FullName;
 							FieldKey fieldKey = new FieldKey(typeKey, sig, field.Name, field);
 
@@ -415,7 +419,7 @@ namespace Obfuscar
 
 					if (ShouldRename(type))
 					{
-						if (!info.ShouldSkip(unrenamedTypeKey))
+                        if (!info.ShouldSkip(unrenamedTypeKey) && (type.Attributes & TypeAttributes.Public) !=  TypeAttributes.Public)
 						{
 							string name;
 							string ns;
@@ -796,6 +800,10 @@ namespace Obfuscar
 					foreach (MethodDefinition method in type.Methods)
 					{
 						string skiprename = null;
+
+                        if (info.IsUnitySkipMethod(method))
+                            skiprename = "monoBehaver method";
+
 						if (!ShouldRename(type))
 							skiprename = "Obfuscar.ObfuscateAttribute found on type.";
 

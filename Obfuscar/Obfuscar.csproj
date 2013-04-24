@@ -83,6 +83,7 @@
     <Compile Include="Settings.cs" />
     <Compile Include="TypeNameCache.cs" />
     <Compile Include="TypeTester.cs" />
+    <Compile Include="UnityUtil.cs" />
     <Compile Include="Variables.cs" />
   </ItemGroup>
   <ItemGroup>
