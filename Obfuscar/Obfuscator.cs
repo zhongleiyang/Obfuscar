@@ -1013,7 +1013,7 @@ namespace Obfuscar
 			IEnumerable<MethodKey> methodKeys, ParamSig sig)
 		{
 			// build unique set of classes in group
-			C5.HashSet<TypeKey> typeKeys = new C5.HashSet<TypeKey>();
+			HashSet<TypeKey> typeKeys = new HashSet<TypeKey>();
 			foreach (MethodKey methodKey in methodKeys)
 				typeKeys.Add(methodKey.TypeKey);
 

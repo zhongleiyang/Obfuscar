@@ -253,7 +253,7 @@ namespace Obfuscar
 					unrenamedReferences.Add(member);
 			}
 
-			C5.HashSet<TypeReference> typerefs = new C5.HashSet<TypeReference>();
+			HashSet<TypeReference> typerefs = new HashSet<TypeReference>();
 			foreach (TypeReference type in definition.MainModule.GetTypeReferences())
 			{
 				if (type.FullName == "<Module>")
@@ -313,7 +313,7 @@ namespace Obfuscar
 
 		IEnumerable<MemberReference> getMemberReferences()
 		{
-			C5.HashSet<MemberReference> memberreferences = new C5.HashSet<MemberReference>();
+			HashSet<MemberReference> memberreferences = new HashSet<MemberReference>();
 			foreach (TypeDefinition type in this.GetAllTypeDefinitions())
 			{
 				foreach (MethodDefinition method in type.Methods)

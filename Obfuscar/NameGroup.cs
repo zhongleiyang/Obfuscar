@@ -31,7 +31,7 @@ namespace Obfuscar
 {
 	class NameGroup : IEnumerable<string>
 	{
-		C5.HashSet<string> names = new C5.HashSet<string>();
+		HashSet<string> names = new HashSet<string>();
 
 		public string GetNext()
 		{
@@ -52,7 +52,10 @@ namespace Obfuscar
 
 		public void AddAll(IEnumerable<string> range)
 		{
-			names.AddAll(range);
+            foreach (var item in range)
+            {
+                names.Add(item);
+            }
 		}
 
 		public void Add(string name)

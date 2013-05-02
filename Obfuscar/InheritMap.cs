@@ -26,6 +26,7 @@ using System;
 using System.Diagnostics;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 using Mono.Cecil;
 using Mono.Cecil.Cil;
@@ -34,12 +35,12 @@ namespace Obfuscar
 {
 	class MethodGroup
 	{
-		private readonly C5.HashSet<MethodKey> methods = new C5.HashSet<MethodKey>();
+		private readonly HashSet<MethodKey> methods = new HashSet<MethodKey>();
 
 		private string name = null;
 		private bool external = false;
 
-		public C5.HashSet<MethodKey> Methods
+		public HashSet<MethodKey> Methods
 		{
 			get { return methods; }
 		}
@@ -133,7 +134,7 @@ namespace Obfuscar
 			return methods[i].Equals((NameParamSig)methods[j]);
 		}
 
-		void GetBaseTypes(C5.HashSet<TypeKey> baseTypes, TypeDefinition type)
+		void GetBaseTypes(HashSet<TypeKey> baseTypes, TypeDefinition type)
 		{
 			// check the interfaces
 			foreach (TypeReference ifaceRef in type.Interfaces)
@@ -157,12 +158,12 @@ namespace Obfuscar
 
 		TypeKey[] GetBaseTypes(TypeDefinition type)
 		{
-			C5.HashSet<TypeKey> baseTypes = new C5.HashSet<TypeKey>();
+			HashSet<TypeKey> baseTypes = new HashSet<TypeKey>();
 			GetBaseTypes(baseTypes, type);
 			return baseTypes.ToArray();
 		}
 
-		void GetVirtualMethods(AssemblyCache cache, C5.TreeSet<MethodKey> methods, TypeDefinition type)
+        void GetVirtualMethods(AssemblyCache cache, HashSet<MethodKey> methods, TypeDefinition type)
 		{
 			// check the interfaces
 			foreach (TypeReference ifaceRef in type.Interfaces)
@@ -198,9 +199,9 @@ namespace Obfuscar
 
 		MethodKey[] GetVirtualMethods(AssemblyCache cache, TypeDefinition type)
 		{
-			C5.TreeSet<MethodKey> methods = new C5.TreeSet<MethodKey>();
+            HashSet<MethodKey> methods = new HashSet<MethodKey>();
 			GetVirtualMethods(cache, methods, type);
-			return methods.ToArray();
+            return methods.ToList().ToArray();
 		}
 
 		MethodGroup AddToGroup(MethodGroup group, MethodKey methodKey)
