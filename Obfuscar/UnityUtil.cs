@@ -12,7 +12,7 @@ namespace Obfuscar
                                                                     "Awake", 
                                                                     "Start",	
                                                                     "Reset",
-                                                                    "main"};
+                                                                    "Main"};
 
         static public bool isSkipMethod(string methodString)
         {
