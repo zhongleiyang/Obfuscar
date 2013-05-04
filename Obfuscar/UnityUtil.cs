@@ -11,63 +11,20 @@ namespace Obfuscar
                                                                     "FixedUpdate",
                                                                     "Awake", 
                                                                     "Start",	
-                                                                    "Reset",	
-                                                                    "OnMouseEnter",	
-                                                                    "OnMouseOver",	 
-                                                                    "OnMouseExit",	
-                                                                    "OnMouseDown",	 
-                                                                    "OnMouseUp",	 
-                                                                    "OnMouseUpAsButton", 
-                                                                    "OnMouseDrag",	
-                                                                    "OnTriggerEnter",	
-                                                                    "OnTriggerExit",	
-                                                                    "OnTriggerStay",	
-                                                                    "OnCollisionEnter",	
-                                                                    "OnCollisionExit",	 
-                                                                    "OnCollisionStay",	 
-                                                                    "OnControllerColliderHit",	 
-                                                                    "OnJointBreak",	
-                                                                    "OnParticleCollision",	
-                                                                    "OnBecameVisible",	
-                                                                    "OnBecameInvisible",	
-                                                                    "OnLevelWasLoaded",	
-                                                                    "OnEnable",	
-                                                                    "OnDisable",	
-                                                                    "OnDestroy",	
-                                                                    "OnPreCull",	
-                                                                    "OnPreRender",	
-                                                                    "OnPostRender",	
-                                                                    "OnRenderObject",	
-                                                                    "OnWillRenderObject",	
-                                                                    "OnGUI",	
-                                                                    "OnRenderImage",	
-                                                                    "OnDrawGizmosSelected",	
-                                                                    "OnDrawGizmos",	
-                                                                    "OnApplicationPause", 
-                                                                    "OnApplicationFocus",	
-                                                                    "OnApplicationQuit",	 
-                                                                    "OnPlayerConnected",	
-                                                                    "OnServerInitialized",	
-                                                                    "OnConnectedToServer",	
-                                                                    "OnPlayerDisconnected",	
-                                                                    "OnDisconnectedFromServer",	
-                                                                    "OnFailedToConnect",	
-                                                                    "OnFailedToConnectToMasterServer",	
-                                                                    "OnMasterServerEvent",	 
-                                                                    "OnNetworkInstantiate",	
-                                                                    "OnSerializeNetworkView",	
-                                                                    "OnAudioFilterRead",	 
-                                                                    "OnAnimatorMove",	
-                                                                    "OnAnimatorIK "};
+                                                                    "Reset",
+                                                                    "main"};
 
         static public bool isSkipMethod(string methodString)
         {
+            if (methodString.Contains("::On"))
+                return true;
+
             foreach (string unityMethod in skipMethods)
                 if (methodString.Contains(unityMethod))
                     return true;
-            
+
             return false;
-        }       
-	 
+        }
+
     }
 }
