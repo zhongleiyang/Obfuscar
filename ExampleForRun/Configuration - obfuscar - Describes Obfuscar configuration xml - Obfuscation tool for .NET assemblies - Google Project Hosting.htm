@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://code.google.com/p/obfuscar/wiki/Configuration -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link rel="icon" type="image/vnd.microsoft.icon" href="https://ssl.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ 
+ <link rel="canonical" href="http://code.google.com/p/obfuscar/wiki/Configuration">
+ 
+ <script src="./Configuration - obfuscar - Describes Obfuscar configuration xml - Obfuscation tool for .NET assemblies - Google Project Hosting_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Configuration - obfuscar - Describes Obfuscar configuration xml - Obfuscation tool for .NET assemblies - Google Project Hosting_files/plusone.js" gapi_processed="true"></script><script type="text/javascript">
+ 
+ 
+ 
+ 
+ var codesite_token = null;
+ 
+ 
+ var CS_env = {"projectName":"obfuscar","assetVersionPath":"https://ssl.gstatic.com/codesite/ph/5872825996519583439","projectHomeUrl":"/p/obfuscar","token":null,"relativeBaseUrl":"","loggedInUserEmail":null,"profileUrl":null,"domainName":null,"assetHostPath":"https://ssl.gstatic.com/codesite/ph"};
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ _gaq.push(
+ ['projectTracker._setAccount', 'UA-1593907-5'],
+ ['projectTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ 
+ </script><script type="text/javascript" async="" src="./Configuration - obfuscar - Describes Obfuscar configuration xml - Obfuscation tool for .NET assemblies - Google Project Hosting_files/ga.js"></script>
+ 
+ 
+ <title>Configuration - 
+ obfuscar -
+ 
+ Describes Obfuscar configuration xml - 
+ Obfuscation tool for .NET assemblies - Google Project Hosting
+ </title>
+ <link type="text/css" rel="stylesheet" href="./Configuration - obfuscar - Describes Obfuscar configuration xml - Obfuscation tool for .NET assemblies - Google Project Hosting_files/core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="./Configuration - obfuscar - Describes Obfuscar configuration xml - Obfuscation tool for .NET assemblies - Google Project Hosting_files/ph_detail.css">
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" href="https://code.google.com/feeds/p/obfuscar/svnchanges/basic?path=/wiki/Configuration.wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/5872825996519583439/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ #maincol {
+ padding-top: 0;
+ padding-bottom: 0;
+ }
+
+ 
+ </style>
+</head>
+<body class="t6">
+<script type="text/javascript">
+ window.___gcfg = {lang: 'en'};
+ (function() 
+ {var po = document.createElement("script");
+ po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+ var s = document.getElementsByTagName("script")[0];
+ s.parentNode.insertBefore(po, s);
+ })();
+</script>
+<div class="headbg">
+
+ <div id="gaia">
+ 
+
+ <span>
+ 
+ 
+ <a href="https://code.google.com/p/obfuscar/wiki/Configuration#" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>▼</small></a>
+ | <a href="https://www.google.com/accounts/ServiceLogin?service=code&ltmpl=phosting&continue=https%3A%2F%2Fcode.google.com%2Fp%2Fobfuscar%2Fwiki%2FConfiguration&followup=https%3A%2F%2Fcode.google.com%2Fp%2Fobfuscar%2Fwiki%2FConfiguration" onclick="_CS_click(&#39;/gb/ph/signin&#39;);"><u>Sign in</u></a>
+ 
+ </span>
+
+ </div>
+
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if lte IE 7]>
+<div style="text-align:center;">
+Your version of Internet Explorer is not supported. Try a browser that
+contributes to open source, such as <a href="http://www.firefox.com">Firefox</a>,
+<a href="http://www.google.com/chrome">Google Chrome</a>, or
+<a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a>.
+</div>
+<![endif]-->
+
+
+
+ <table style="padding:0px; margin: 0px 0px 10px 0px; width:100%" cellpadding="0" cellspacing="0" itemscope="" itemtype="http://schema.org/CreativeWork">
+ <tbody><tr style="height: 58px;">
+ 
+ 
+ 
+ <td id="plogo">
+ <link itemprop="url" href="https://code.google.com/p/obfuscar">
+ <a href="https://code.google.com/p/obfuscar/">
+ 
+ <img src="./Configuration - obfuscar - Describes Obfuscar configuration xml - Obfuscation tool for .NET assemblies - Google Project Hosting_files/defaultlogo.png" alt="Logo" itemprop="image">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname">
+ <a href="https://code.google.com/p/obfuscar/"><span itemprop="name">obfuscar</span></a>
+ </div>
+ 
+ <div id="psum">
+ <a id="project_summary_link" href="https://code.google.com/p/obfuscar/"><span itemprop="description">Obfuscation tool for .NET assemblies</span></a>
+ 
+ </div>
+ 
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right; vertical-align:bottom;">
+ 
+ <form action="https://code.google.com/hosting/search">
+ <input size="30" name="q" value="" type="text">
+ 
+ <input type="submit" name="projectsearch" value="Search projects">
+ </form>
+ 
+ </td></tr>
+ </tbody></table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="https://code.google.com/p/obfuscar/" class="tab ">Project&nbsp;Home</a>
+ 
+ 
+ 
+ 
+ <a href="https://code.google.com/p/obfuscar/downloads/list" class="tab ">Downloads</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="https://code.google.com/p/obfuscar/w/list" class="tab active">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="https://code.google.com/p/obfuscar/issues/list" class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="https://code.google.com/p/obfuscar/source/checkout" class="tab ">Source</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class="gtbc"></div>
+</div>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tbody><tr>
+ 
+ 
+ 
+ <td class="subt">
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="https://code.google.com/p/obfuscar/w/list" method="GET" style="display:inline">
+ <select id="can" name="can">
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1">&nbsp;All wiki pages</option>
+ <option value="3">&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="4">&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input type="text" size="38" id="searchq" name="q" value="" autocomplete="off"></span>
+ 
+ 
+ 
+ <input type="submit" value="Search">
+ </form>
+ </span>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td align="right" valign="top" class="bevel-right"></td>
+ </tr>
+</tbody></table>
+
+
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+<div id="maincol">
+
+ 
+
+
+
+
+
+
+
+ <style type="text/css">
+ .delcom { background: #e8e8e8 }
+ .commentcontent {
+ margin: 2em;
+ padding: 0px 10px;
+ width: 66em;
+ }
+ .artifactcomment {
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentform {
+ border-top: 3px solid #c3d9ff;
+ }
+ </style>
+
+<div id="wikipage">
+<table>
+ <tbody><tr>
+ 
+ 
+ <td style="vertical-align:top; padding-left:5px">
+ 
+ <div id="wikiheader">
+ 
+ <span style="font-size:120%;font-weight:bold">Configuration</span>
+ &nbsp;
+ <div> 
+ 
+ <i>Describes Obfuscar configuration xml</i>
+ 
+ 
+ <br>
+ 
+ <a class="label" style="padding-top: 2px" href="https://code.google.com/p/obfuscar/w/list?q=label:Featured" title="Listed on project home page">Featured</a>
+ 
+ 
+ 
+ <div id="wikiauthor" style="float:right">
+ Updated <span title="Thu Mar 11 09:35:54 2010">
+ Mar 11, 2010</span>
+ 
+ by 
+
+ <a class="userlink" href="https://code.google.com/u/111531003854810474706/">webbi...@googlemail.com</a>
+ 
+ </div>
+ </div>
+ </div>
+ 
+ <div id="wikicontent">
+ <div class="vt" id="wikimaincol">
+ <h1><a name="Obfuscar_Configuration"></a>Obfuscar Configuration<a href="https://code.google.com/p/obfuscar/wiki/Configuration#Obfuscar_Configuration" class="section_anchor"></a></h1><p>Obfuscar accepts a single command line argument, the path to its configuration file. </p><p>The configuration file is used to specify what assemblies should be obfuscated, where to find the dependencies for the assemblies, and where the obfuscated assemblies should be saved. </p><h2><a name="Variables,_InPath_and_OutPath"></a>Variables, <tt>InPath</tt> and <tt>OutPath</tt><a href="https://code.google.com/p/obfuscar/wiki/Configuration#Variables,_InPath_and_OutPath" class="section_anchor"></a></h2><p>The following is a is an example of a minimal configuration.  It is provided in the release as part of the <a href="https://code.google.com/p/obfuscar/wiki/BasicExample">BasicExample</a>: </p><pre class="prettyprint"><span class="pun">&lt;?</span><span class="pln">xml version</span><span class="pun">=</span><span class="str">'1.0'</span><span class="pun">?&gt;</span><span class="pln"><br></span><span class="tag">&lt;Obfuscator&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;Var</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"InPath"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">".\Obfuscator_Input"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;Var</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"OutPath"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">".\Obfuscator_Output"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br>&nbsp; </span><span class="tag">&lt;Module</span><span class="pln"> </span><span class="atn">file</span><span class="pun">=</span><span class="atv">"$(InPath)\BasicExampleExe.exe"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;Module</span><span class="pln"> </span><span class="atn">file</span><span class="pun">=</span><span class="atv">"$(InPath)\BasicExampleLibrary.dll"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;/Obfuscator&gt;</span></pre><p>In the example configuration, two variables are defined, <tt>InPath</tt> and <tt>OutPath</tt>, using the <tt>Var</tt> element, and two assemblies are listed for obfuscation, an executable and a dll. </p><p>Variables defined using the <tt>Var</tt> element will be expanded in strings following the definition...After defining <tt>InPath</tt> as follows: </p><pre class="prettyprint"><span class="pln">&nbsp; </span><span class="tag">&lt;Var</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"InPath"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">".\Obfuscator_Input"</span><span class="pln"> </span><span class="tag">/&gt;</span></pre><p>It can be used in another location: </p><pre class="prettyprint"><span class="pln">&nbsp; </span><span class="tag">&lt;Module</span><span class="pln"> </span><span class="atn">file</span><span class="pun">=</span><span class="atv">"$(InPath)\BasicExampleExe.exe"</span><span class="pln"> </span><span class="tag">/&gt;</span></pre><p>In addition to being usable like macros, there are a few special variables that have additional effects.  The variable <tt>InPath</tt> is used when trying to find dependencies (the specified path is searched), and the variable <tt>OutPath</tt> is used as the output path for the obfuscated assemblies and the map.  If either <tt>InPath</tt> or <tt>OutPath</tt> is unspecified, they default to the current path ("."). </p><h2><a name="Modules"></a>Modules<a href="https://code.google.com/p/obfuscar/wiki/Configuration#Modules" class="section_anchor"></a></h2><p>For each assembly to be obfuscated, there must be a <tt>Module</tt> element.  Assemblies referenced by an assembly specified by a <tt>Module</tt> element must be resolveable, either via Cecil's regular resolve process, or they must be present in the path specified by <tt>InPath</tt>. </p><p>Though additional assemblies are loaded for examination, only the specified assemblies will be obfuscated. </p><h2><a name="Exclusion_by_Configuration"></a>Exclusion by Configuration<a href="https://code.google.com/p/obfuscar/wiki/Configuration#Exclusion_by_Configuration" class="section_anchor"></a></h2><p>It is possible to include additional elements within the <tt>Module</tt> elements to skip types (the <tt>SkipTypes</tt> element), methods (the <tt>SkipMethod</tt> element), fields (<tt>SkipField</tt>), properties (<tt>SkipProperty</tt>), and events (<tt>SkipEvent</tt>, of course). Methods can be excluded from string obfuscation by <tt>SkipStringHiding</tt>. </p><p>The <tt>SkipNamespace</tt> element specifies a namespace that should be skipped.  All types, methods, fields, etc., within the namespace will be skipped. </p><p>The <tt>SkipType</tt> element specifies the name of the type to skip, including the full namespace.  It can also specify whether to skip the method, fields, properties, and/or events within the type. </p><p>The <tt>SkipMethod</tt> element specifies the name of the type containing the method, a protection specifier, and a name or regex to match the method.  The protection specifier is currently ignored, but will eventually be used for additional filtering. </p><p>The <tt>SkipField</tt> element specifies the name of the type containing the field, a protection specifier, and a name or regex to match the field.  The protection specifier is currently ignored, but will eventually be used for additional filtering. </p><p>The <tt>SkipProperty</tt> element specifies the name of the type containing the property, a protection specifier, and a name or regex to match the property.  The protection specifier is currently ignored, but will eventually be used for additional filtering. </p><p>The <tt>SkipEvent</tt> element specifies the name of the type containing the event, a protection specifier, and a name or regex to match the event.  The protection specifier is currently ignored, but will eventually be used for additional filtering. </p><p>The <tt>SkipStringHiding</tt> element works like the <tt>SkipMethod</tt> element, but specifies within which methods not to obfuscate the string constants. To make it harder to analyze the code, Obfuscar normally replaces string loads by method calls to lookup functions, which incurs a small performance penalty. </p><p>A more complete example: </p><pre class="prettyprint"><span class="pln">&nbsp; </span><span class="tag">&lt;Module</span><span class="pln"> </span><span class="atn">file</span><span class="pun">=</span><span class="atv">"$(InPath)\AssemblyX.exe"</span><span class="tag">&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip a namespace --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipNamespace</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Company.PublicBits"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- to skip a namespace recursively, just put * on the end --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipNamespace</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Company.PublicBits*"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip field by name --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipField</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="atn">attrib</span><span class="pun">=</span><span class="atv">"public"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Fieldname"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip field by regex --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipField</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="atn">attrib</span><span class="pun">=</span><span class="atv">"public"</span><span class="pln"> </span><span class="atn">rx</span><span class="pun">=</span><span class="atv">"Pub.*"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip type...will still obfuscate its methods --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipType</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName2"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip type...will skip its methods next --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipType</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName3"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip TypeName3's public methods --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipMethod</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName3"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="atn">attrib</span><span class="pun">=</span><span class="atv">"public"</span><span class="pln"> </span><span class="atn">rx</span><span class="pun">=</span><span class="atv">".*"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip TypeName3's protected methods --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipMethod</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName3"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="atn">attrib</span><span class="pun">=</span><span class="atv">"family"</span><span class="pln"> </span><span class="atn">rx</span><span class="pun">=</span><span class="atv">".*"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip type and its methods --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipType</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName4"</span><span class="pln"> </span><span class="atn">skipMethods</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip type and its fields --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipType</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName4"</span><span class="pln"> </span><span class="atn">skipFields</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip type and its properties --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipType</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName4"</span><span class="pln"> </span><span class="atn">skipProperties</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip type and its events --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipType</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName4"</span><span class="pln"> </span><span class="atn">skipEvents</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip attributes can be combined (this will skip the methods and fields) --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipType</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName4"</span><span class="pln"> </span><span class="atn">skipMethods</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">skipFields</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip the hiding of strings in this type's methods --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipType</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName4"</span><span class="pln"> </span><span class="atn">skipStringHiding</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip a property in TypeName5 by name --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipProperty</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName5"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Property2"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip a property in TypeName5 by regex --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipProperty</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName5"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="atn">attrib</span><span class="pun">=</span><span class="atv">"public"</span><span class="pln"> </span><span class="atn">rx</span><span class="pun">=</span><span class="atv">"Something\d"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip an event in TypeName5 by name --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipProperty</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName5"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Event2"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- skip an event in TypeName5 by regex --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipProperty</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName5"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="atn">rx</span><span class="pun">=</span><span class="atv">"Any.*"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">&lt;!-- avoid the hiding of strings in TypeName6 on all methods --&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;SkipStringHiding</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"Full.Namespace.And.TypeName6"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"*"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/Module&gt;</span></pre><p>To prevent all properties from being obfuscated, set the <tt>RenameProperties</tt> variable to "false" (it's an xsd boolean).  To prevent specific properties from being renamed, use the <tt>SkipProperty</tt> element.  It will also skip the property's accessors, <tt>get_XXX</tt> and <tt>set_XXX</tt>. </p><p>To prevent all events from being obfuscated, set the <tt>RenameEvents</tt> variable to "false" (it's also xsd boolean).  To prevent specific events from being renamed, use the <tt>SkipEvent</tt> element.  It will also skip the event's accessors, <tt>add_XXX</tt> and <tt>remove_XXX</tt>. </p><h3><a name="Name_Matching"></a>Name Matching<a href="https://code.google.com/p/obfuscar/wiki/Configuration#Name_Matching" class="section_anchor"></a></h3><p>The <tt>SkipMethod</tt>, <tt>SkipProperty</tt>, <tt>SkipEvent</tt>, <tt>SkipField</tt>, and <tt>SkipStringHiding</tt> elements accept an <tt>rx</tt> attribute that specifies a regular expression used to match the name of the thing to be skipped. The <tt>SkipType</tt>, <tt>SkipMethod</tt>, <tt>SkipProperty</tt>, <tt>SkipEvent</tt>, <tt>SkipField</tt>, and <tt>SkipStringHiding</tt> elements all accept a <tt>name</tt> attribute that specifies a string with optional wildcards or a regular expression used to match the name of the thing to be skipped. For elements where both the <tt>name</tt> and <tt>rx</tt> attributes are specified, the <tt>rx</tt> attribute is ignored. The <tt>name</tt> attribute can specify either a string or a regular expression to match the name of the thing to be skipped.  If the value of the <tt>name</tt> attribute begins with a '<tt>^</tt>' character, the value (including the '<tt>^</tt>') will be treated as a regular expression (e.g., the name '<tt>^so.*g</tt>' will match the string <tt>something</tt>).  Otherwise, the value will be used as a wildcard string, where '<tt>*</tt>' matches zero or more characters, and '<tt>?</tt>' matches a single character (e.g., the wildcard string <tt>som?t*g</tt> will match the string <tt>something</tt>). </p><p>This behavior also applies to the value of the <tt>type</tt> attribute of the <tt>SkipMethod</tt>, <tt>SkipProperty</tt>, <tt>SkipEvent</tt>, <tt>SkipField</tt>, and <tt>SkipStringHiding</tt> elements. </p><h3><a name="Accessibility_Check"></a>Accessibility Check<a href="https://code.google.com/p/obfuscar/wiki/Configuration#Accessibility_Check" class="section_anchor"></a></h3><p>The <tt>SkipMethod</tt>, <tt>SkipProperty</tt>, <tt>SkipEvent</tt>, <tt>SkipField</tt>, and <tt>SkipStringHiding</tt> elements also accept an <tt>attrib</tt> attribute. </p><ul><li>Not specified or <tt>attrib=''</tt>: All members are skipped from obfuscation. </li><li><tt>attrib='public'</tt>: Only public members are skipped. </li><li><tt>attrib='protected'</tt>: Only public and protected members are skipped. </li><li>All other values for <tt>attrib</tt> generate an error by now. </li></ul>Members which are <tt>internal</tt> or <tt>protected internal</tt> are not skipped when <tt>attrib</tt> is <tt>public</tt> or <tt>protected</tt>. <p></p><p>Properties and events do not directly have an accessibility attribute, but their underlying methods (getter, setter, add, remove) have. For properties the attribute of the getter and for events the attribute of the add method is used. </p><h2><a name="Exclusion_by_Code"></a>Exclusion by Code<a href="https://code.google.com/p/obfuscar/wiki/Configuration#Exclusion_by_Code" class="section_anchor"></a></h2><p>There's also some functionality where you can mark types with an attribute to prevent them from being obfuscated...reference Obfuscar.exe and add the <tt>Obfuscate</tt> attribute to your types.  For example, to suppress obfuscation of <tt>X</tt>, its methods, fields, resources, etc.: </p><pre class="prettyprint"><span class="pln">&nbsp; </span><span class="pun">[</span><span class="typ">Obfuscate</span><span class="pun">(</span><span class="pln"> </span><span class="kwd">false</span><span class="pln"> </span><span class="pun">)]</span><span class="pln"><br>&nbsp; </span><span class="kwd">class</span><span class="pln"> X </span><span class="pun">{</span><span class="pln"> </span><span class="pun">}</span></pre><p>The <tt>Obfuscate</tt> attribute has a flag, <tt>ShouldObfuscate</tt>, that defaults to true if not set.  The following are equivalent: </p><pre class="prettyprint"><span class="pln">&nbsp; </span><span class="pun">[</span><span class="typ">Obfuscate</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="kwd">class</span><span class="pln"> X </span><span class="pun">{</span><span class="pln"> </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; </span><span class="pun">[</span><span class="typ">Obfuscate</span><span class="pun">(</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)]</span><span class="pln"><br>&nbsp; </span><span class="kwd">class</span><span class="pln"> Y </span><span class="pun">{</span><span class="pln"> </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; </span><span class="pun">[</span><span class="typ">Obfuscate</span><span class="pun">(</span><span class="pln"> </span><span class="typ">ShouldObfuscate</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">)]</span><span class="pln"><br>&nbsp; </span><span class="kwd">class</span><span class="pln"> X </span><span class="pun">{</span><span class="pln"> </span><span class="pun">}</span></pre><p>And if you only want specific classes obfuscated, you can set the <tt>MarkedOnly</tt> variable to "true" (also an xsd boolean), and apply the <tt>Obfuscate</tt> attribute to the things you want obfuscated.  This is done in the ObfuscarTests project (included w/ the source...it's intended to be a place for unit tests, but for now does little) to obfuscate a subset of the classes.  For example, if <tt>MarkedOnly</tt> is set to true, to include obfuscation of <tt>X</tt>, its methods, fields, resources, etc.: </p><pre class="prettyprint"><span class="pln">&nbsp; </span><span class="pun">[</span><span class="typ">Obfuscate</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="kwd">class</span><span class="pln"> X </span><span class="pun">{</span><span class="pln"> </span><span class="pun">}</span></pre><h2><a name="Control_Generation_of_Obfuscated_Names"></a>Control Generation of Obfuscated Names<a href="https://code.google.com/p/obfuscar/wiki/Configuration#Control_Generation_of_Obfuscated_Names" class="section_anchor"></a></h2><p>By default all new type and member names generated by Obfuscar are only unique within their scopes. A type with name <tt>A</tt> may be part of namespace <tt>A.A</tt> and <tt>A.B</tt>. The same holds true for type members. Multiple types may have fields and properties with the same name. </p><p>When using <tt>System.Xml.Serialization.XmlSerializer</tt> on obfuscated types, the names of generated Xml elements and attributes have to be specified with one of the <tt>XmlXXXXXAttribute</tt> attributes. This is because the original type and member names do not exist any more after obfuscation. For some reasons the XmlSerializer uses the obfuscated names internally even though they are overridden by attributes. Because of that it fails on duplicate names. The same is true for the XML Serializer Generator-Tool (Sgen.exe). </p><p>You can work around this problem by setting the <tt>ReuseNames</tt> variable to <tt>false</tt>. In this case the obfuscator does not reuse names for types, fields and properties. The generated names are unique over all assemblies. This setting does not apply to methods. </p><p>Add the following line to the configuration file to enable unique names: </p><pre class="prettyprint"><span class="pln">&nbsp; </span><span class="tag">&lt;Var</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"ReuseNames"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"false"</span><span class="pln"> </span><span class="tag">/&gt;</span></pre><h2><a name="Control_Hiding_of_Strings"></a>Control Hiding of Strings<a href="https://code.google.com/p/obfuscar/wiki/Configuration#Control_Hiding_of_Strings" class="section_anchor"></a></h2><p>By default Obfuscar hides all string constants by replacing the string load (LDSTR opcode) by calls to methods which return the string from a buffer. This buffer is allocated on startup (in a static constructor) by reading from a XOR-encoded UTF8 byte array containing all strings. This comes with a small performance cost. You can disable this feature completely by adding the following line to the configuration file: </p><pre class="prettyprint"><span class="pln">&nbsp; </span><span class="tag">&lt;Var</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"HideStrings"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"false"</span><span class="pln"> </span><span class="tag">/&gt;</span></pre><p>If you only want to disable it on specific methods use the <tt>SkipStringHiding</tt> elements. </p><h2><a name="Signing_of_Strongly_Named_Assemblies"></a>Signing of Strongly Named Assemblies<a href="https://code.google.com/p/obfuscar/wiki/Configuration#Signing_of_Strongly_Named_Assemblies" class="section_anchor"></a></h2><p>Signed assemblies will not work after obfuscation and must be re-signed. </p><p>Add the following line to the configuration file to specify the path to your key file. When given a <tt>KeyFile</tt> in the configuration, Obfuscar will sign a <strong>previously</strong> signed assembly with the given key. Relative paths are searched from the current directory and, if not found, from the directory containing the particular assembly. </p><pre class="prettyprint"><span class="pln">&nbsp; </span><span class="tag">&lt;Var</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"KeyFile"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"key.snk"</span><span class="pln"> </span><span class="tag">/&gt;</span></pre><p>If no <tt>KeyFile</tt> is specified, Obfuscar normally throws an exception on signed assemblies. If an assembly is marked <i>delay signed</i>, the signing step will be skipped in case no key file is given. </p><p>With the special key file name <tt>auto</tt>, Obfuscar uses the value of the AssemblyKeyFileAttribute instead (if existing). </p>
+ </div>
+ </div>
+ </td></tr><tr>
+</tr></tbody></table>
+ </div>
+
+
+ 
+ <div id="wikicommentcol">
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+<div class="collapse">
+
+
+ 
+
+
+<div id="commentlist">
+
+ 
+ <div class="artifactcomment">
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">simonnot...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Thu Jan  8 09:42:06 2009">Jan 8, 2009</span>
+ <div>
+<div class="commentcontent">
+<p>Great work, as good as, if not better than most commercially available software.  Thanks. </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment">
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ <a class="userlink" href="https://code.google.com/u/106570733739697141660/">leveque....@gmail.com</a>,
+ 
+ </span>
+ <span class="date" title="Sat Jul 31 11:12:57 2010">Jul 31, 2010</span>
+ <div>
+<div class="commentcontent">
+<p>Beware, Var tags must be at the beginning of the configuration file otherwise they are not taken in account. (Obfuscar 1.5.4, <a title="Signed assemblies without their declaration in Assembly.cs can&#39;t be resigned" class="closed_ref" href="https://code.google.com/p/obfuscar/issues/detail?id=38">&nbsp;issue 38&nbsp;</a>) </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment">
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ <a class="userlink" href="https://code.google.com/u/111891806031322565650/">zhenya....@gmail.com</a>,
+ 
+ </span>
+ <span class="date" title="Fri Jan 27 04:02:18 2012">Jan 27, 2012</span>
+ <div>
+<div class="commentcontent">
+<p>HideStrings<a href="https://code.google.com/p/obfuscar/w/edit/HideStrings">?</a> feature might be dangerous. Sometimes we use constant string for example for event type. And then compare strings with == operator, since we know that they are the same object. </p><p>However with HideStrings<a href="https://code.google.com/p/obfuscar/w/edit/HideStrings">?</a> feature those objects are no longer the same. </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment">
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ <a class="userlink" href="https://code.google.com/u/106570733739697141660/">leveque....@gmail.com</a>,
+ 
+ </span>
+ <span class="date" title="Wed Apr 25 02:43:58 2012">Apr 25, 2012</span>
+ <div>
+<div class="commentcontent">
+<p>To save a little time, for those like me who have problems with the configuration syntax here an xsd to validate it. </p><pre class="prettyprint"><span class="tag">&lt;xs:schema</span><span class="pln"> </span><span class="atn">xmlns:xs</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema"</span><span class="pln"> </span><span class="atn">elementFormDefault</span><span class="pun">=</span><span class="atv">"qualified"</span><span class="tag">&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:simpleType</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"RangeType"</span><span class="tag">&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:restriction</span><span class="pln"> </span><span class="atn">base</span><span class="pun">=</span><span class="atv">"xs:string"</span><span class="tag">&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:enumeration</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">""</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:enumeration</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"public"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:enumeration</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"internal"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:enumeration</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"protected"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:enumeration</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"private"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:restriction&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:simpleType&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:complexType</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"CommonAttribMemberType"</span><span class="tag">&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:attribute</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"type"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"xs:string"</span><span class="pln"> </span><span class="atn">use</span><span class="pun">=</span><span class="atv">"required"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:attribute</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"name"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"xs:string"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:attribute</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"attrib"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"RangeType"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:attribute</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"rx"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"xs:string"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:complexType&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:element</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Obfuscator"</span><span class="tag">&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:complexType&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:sequence&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:element</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Var"</span><span class="pln"> </span><span class="atn">maxOccurs</span><span class="pun">=</span><span class="atv">"unbounded"</span><span class="tag">&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:complexType&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:attribute</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"name"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"xs:string"</span><span class="pln"> </span><span class="atn">use</span><span class="pun">=</span><span class="atv">"required"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:attribute</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"value"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"xs:string"</span><span class="pln"> </span><span class="atn">use</span><span class="pun">=</span><span class="atv">"required"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:complexType&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:element&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:element</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"Module"</span><span class="pln"> </span><span class="atn">maxOccurs</span><span class="pun">=</span><span class="atv">"unbounded"</span><span class="tag">&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:complexType&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:all&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:element</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"SkipNamespace"</span><span class="pln"> </span><span class="atn">maxOccurs</span><span class="pun">=</span><span class="atv">"unbounded"</span><span class="pln"> </span><span class="atn">minOccurs</span><span class="pun">=</span><span class="atv">"0"</span><span class="tag">&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:complexType&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:attribute</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"name"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"xs:string"</span><span class="pln"> </span><span class="atn">use</span><span class="pun">=</span><span class="atv">"required"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:complexType&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:element&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:element</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"SkipType"</span><span class="pln"> </span><span class="atn">maxOccurs</span><span class="pun">=</span><span class="atv">"unbounded"</span><span class="pln"> </span><span class="atn">minOccurs</span><span class="pun">=</span><span class="atv">"0"</span><span class="tag">&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:complexType&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:attribute</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"name"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"xs:string"</span><span class="pln"> </span><span class="atn">use</span><span class="pun">=</span><span class="atv">"required"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:attribute</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"skipMethods"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"xs:boolean"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:attribute</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"skipProperties"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"xs:boolean"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:attribute</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"skipFields"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"xs:boolean"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:complexType&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:element&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:element</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"SkipMethod"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"CommonAttribMemberType"</span><span class="pln"> </span><span class="atn">maxOccurs</span><span class="pun">=</span><span class="atv">"unbounded"</span><span class="pln"> </span><span class="atn">minOccurs</span><span class="pun">=</span><span class="atv">"0"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:element</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"SkipField"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"CommonAttribMemberType"</span><span class="pln"> </span><span class="atn">maxOccurs</span><span class="pun">=</span><span class="atv">"unbounded"</span><span class="pln"> </span><span class="atn">minOccurs</span><span class="pun">=</span><span class="atv">"0"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:element</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"SkipProperty"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"CommonAttribMemberType"</span><span class="pln"> </span><span class="atn">maxOccurs</span><span class="pun">=</span><span class="atv">"unbounded"</span><span class="pln"> </span><span class="atn">minOccurs</span><span class="pun">=</span><span class="atv">"0"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:element</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"SkipEvent"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"CommonAttribMemberType"</span><span class="pln"> </span><span class="atn">maxOccurs</span><span class="pun">=</span><span class="atv">"unbounded"</span><span class="pln"> </span><span class="atn">minOccurs</span><span class="pun">=</span><span class="atv">"0"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:element</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"SkipStringHiding"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"CommonAttribMemberType"</span><span class="pln"> </span><span class="atn">maxOccurs</span><span class="pun">=</span><span class="atv">"unbounded"</span><span class="pln"> </span><span class="atn">minOccurs</span><span class="pun">=</span><span class="atv">"0"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:all&gt;</span><span class="pln"> </span><span class="tag">&lt;xs:attribute</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"file"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"xs:string"</span><span class="pln"> </span><span class="atn">use</span><span class="pun">=</span><span class="atv">"required"</span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:complexType&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:element&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:sequence&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:complexType&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:element&gt;</span><span class="pln"> </span><span class="tag">&lt;/xs:schema&gt;</span><span class="pln"> </span></pre>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment">
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">RussellJ...@googlemail.com</span>,
+ 
+ </span>
+ <span class="date" title="Thu Jan 31 02:50:15 2013">Jan 31, 2013</span>
+ <div>
+<div class="commentcontent">
+<p>A UI would be nice... ;-) </p><p>That aside, overall, the obfuscation is totally brilliant, much better than any other free software I have seen. Really useful software. </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment">
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ <a class="userlink" href="https://code.google.com/u/110416038010228823918/">sezere...@gmail.com</a>,
+ 
+ </span>
+ <span class="date" title="Tue Apr 16 13:19:32 2013">Apr 16, 2013</span>
+ <div>
+<div class="commentcontent">
+<p>in xsd schema there is a word to replace... </p><blockquote>&lt;xs:all&gt; must be &lt;xs:sequence&gt; 
+</blockquote>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+</div>
+</div>
+
+ 
+
+
+ <script type="text/javascript">
+ function delComment(sequence_num, create_time, delete_mode) {
+ var f = document.forms["delcom"];
+ f.sequence_num.value = sequence_num;
+ f.create_time.value = create_time;
+ f.mode.value = delete_mode;
+ f.submit();
+ return false;
+ }
+ </script>
+
+
+ </div>
+ 
+ 
+ 
+ 
+ <br>
+ <div class="artifactcomment">
+ <span class="indicator">►</span> <a href="https://www.google.com/accounts/ServiceLogin?service=code&ltmpl=phosting&continue=https%3A%2F%2Fcode.google.com%2Fp%2Fobfuscar%2Fwiki%2FConfiguration&followup=https%3A%2F%2Fcode.google.com%2Fp%2Fobfuscar%2Fwiki%2FConfiguration">Sign in</a> to add a comment
+ </div>
+ 
+ 
+ 
+ 
+ <form name="delcom" action="https://code.google.com/p/obfuscar/w/delComment.do" method="POST">
+ <input type="hidden" name="sequence_num" value="">
+ <input type="hidden" name="create_time" value="">
+ <input type="hidden" name="mode" value="">
+ <input type="hidden" name="pagename" value="Configuration">
+ <input type="hidden" name="token" value="">
+ </form>
+
+
+ <script src="./Configuration - obfuscar - Describes Obfuscar configuration xml - Obfuscation tool for .NET assemblies - Google Project Hosting_files/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="./Configuration - obfuscar - Describes Obfuscar configuration xml - Obfuscation tool for .NET assemblies - Google Project Hosting_files/dit_scripts.js"></script>
+
+
+
+  
+ 
+ 
+ <script type="text/javascript" src="./Configuration - obfuscar - Describes Obfuscar configuration xml - Obfuscation tool for .NET assemblies - Google Project Hosting_files/ph_core.js"></script>
+ 
+ <script type="text/javascript" src="./Configuration - obfuscar - Describes Obfuscar configuration xml - Obfuscation tool for .NET assemblies - Google Project Hosting_files/ph_dwiki.js"></script>
+ 
+ 
+ 
+ 
+</div> 
+
+<div id="footer" dir="ltr">
+ <div class="text">
+ <a href="https://code.google.com/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="https://code.google.com/p/support/">Project Hosting Help</a>
+ </div>
+</div>
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+
+ 
+ 
+
+
+ 
+ 
+
+
+
+<div class="menuDiv instance0" id="menuDiv-projects-dropdown" style="position: absolute; top: 19px; left: 1113px; display: none;"><div class="menuCategory default" style="display: none;"></div><div class="menuCategory controls first" style=""><a class="menuItem" style="display: block;" href="http://www.google.com/accounts/ServiceLogin?service=code&ltmpl=phosting&continue=https%3A%2F%2Fcode.google.com%2Fp%2Fobfuscar%2Fwiki%2FConfiguration&amp;followup=https%3A%2F%2Fcode.google.com%2Fp%2Fobfuscar%2Fwiki%2FConfiguration">Sign in to see your favorites</a><hr class="menuSeparator"><a class="menuItem" style="display: block;" href="https://code.google.com/hosting/">Find open source projects...</a><a class="menuItem" style="display: block;" href="https://code.google.com/hosting/createProject">Create a project...</a></div></div></body></html>

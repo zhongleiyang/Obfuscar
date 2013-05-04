@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+<Obfuscator>
+  <Var name="InPath" value=".\Obfuscator_Input" />
+  <Var name="OutPath" value=".\Obfuscator_Output" />
+  <Var name="ReuseNames" value="true" />
+
+  <Module file="$(InPath)\Assembly-CSharp.dll" />
+ <Module file="$(InPath)\Assembly-CSharp-firstpass.dll" />
+  <Module file="$(InPath)\Assembly-UnityScript.dll" />
+  <Module file="$(InPath)\Boo.Lang.dll" >
+  <SkipNamespace name="Boo.Lang*" />
+  </Module>
+  <Module file="$(InPath)\UnityEngine.dll" >
+  <SkipNamespace name="UnityEngine*" />
+  </Module>
+  <Module file="$(InPath)\UnityScript.Lang.dll" >
+  <SkipNamespace name="UnityScript.Lang*" />
+  </Module>
+</Obfuscator>
